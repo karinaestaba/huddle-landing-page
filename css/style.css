@@ -17,8 +17,8 @@
 
   --font-family-headings: 'Poppins', sans-serif;
   --font-family-body: 'Open Sans', sans-serif;
-  --font-size: 16px;
-  --line-height: 26px;
+  --font-size: 18px;
+  --line-height: 30px;
 
   --padding: 2rem;
   --margin: 1rem;
@@ -48,6 +48,7 @@ body{
 
   padding: var(--padding);
   font-family: var(--font-family-body);
+  font-size: var(--font-size);
   line-height: var(--line-height);
 
   text-align: center;
@@ -122,7 +123,8 @@ button{
 
       h1.title{
         font-family: var(--font-family-headings);
-        line-height: calc(var(--line-height) * 1.8);
+        font-size: 2.5rem;
+        line-height: 3.5rem;
         margin-bottom: var(--margin);
 
         white-space: pre-line;
