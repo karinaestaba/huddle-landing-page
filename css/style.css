@@ -255,26 +255,31 @@ button{
   }
 
   .main-container{
-    padding-left: calc(var(--padding) * 1.5);
-    padding-right: calc(var(--padding) * 1.5);
+    padding-left: var(--padding);
+    padding-right: var(--padding);
   }
 
     .main-content{
-      gap: 1rem;
+      gap: 2.8rem;
       -ms-grid-columns: 1fr 1rem 1fr;
       grid-template-columns: 1fr 1fr;
     }
 
-      .main-footer{
-        -webkit-box-pack: end;
-            -ms-flex-pack: end;
-                justify-content: end;
-        padding: 0 0 1rem;
+      .image-hero > img{
+        width: 100%;
+        height: 100%;
       }
 
-      .text-container{
-        padding-top: calc(var(--padding) * 1.3);
-      }
+    .main-footer{
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: end;
+      padding: 0 0 1rem;
+    }
+
+    .text-container{
+      padding-top: 1.5rem;
+    }
 
   .cta{
     width: auto;
