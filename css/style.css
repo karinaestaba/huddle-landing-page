@@ -264,6 +264,8 @@ button{
       gap: 2.8rem;
       -ms-grid-columns: 1fr 1rem 1fr;
       grid-template-columns: 1fr 1fr;
+      justify-content: center;
+      align-items: center;
     }
 
       .image-hero > img{
