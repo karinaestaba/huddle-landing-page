@@ -218,6 +218,7 @@ button{
     font-style: normal;
     font-weight: normal;
     speak: never;
+    font-size: 1.5rem;
    
     display: inline-block;
     text-decoration: inherit;
