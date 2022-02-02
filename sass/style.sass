@@ -1,0 +1,206 @@
+@font-face
+  font-family: 'fontello'
+  src: url('../font/fontello.eot?63210088')
+  src: url('../font/fontello.eot?63210088#iefix') format('embedded-opentype'), url('../font/fontello.woff?63210088') format('woff'), url('../font/fontello.ttf?63210088') format('truetype'), url('../font/fontello.svg?63210088#fontello') format('svg')
+  font-weight: normal
+  font-style: normal
+
+\:root
+  --violet: hsl(257, 40%, 49%)
+  --soft-magenta: hsl(300, 69%, 71%)
+  --hot-magenta: #e959c5
+  --white: #fff
+
+  --font-family-headings: 'Poppins', sans-serif
+  --font-family-body: 'Open Sans', sans-serif
+  --font-size: 18px
+  --line-height: 30px
+
+  --padding: 2rem
+  --margin: 1rem
+
+*,
+*::after,
+*::before
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+
+html,
+body
+  height: 100%
+  min-height: 100vh
+
+body
+  background-color: var(--violet)
+  background-image: url("../images/bg-mobile.svg")
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  padding: var(--padding)
+  font-family: var(--font-family-body)
+  font-size: var(--font-size)
+  line-height: var(--line-height)
+  text-align: center
+
+body,
+p,
+h1,
+button
+  color: var(--white)
+
+.main
+  &-container
+    max-width: 1440px
+    margin: 0 auto
+    height: 100%
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: auto 1fr auto
+
+  &-content
+    display: grid
+    padding-top: var(--padding)
+    padding-bottom: var(--padding)
+
+    .image
+      &-container
+        padding-bottom: var(--padding)
+
+      &-hero 
+        > img
+          width: 100%
+
+    .text-container
+      padding-top: var(--padding)
+    
+    h1
+      &.title
+        font-family: var(--font-family-headings)
+        font-size: 2rem
+        line-height: 3rem
+        margin-bottom: var(--margin)
+        white-space: pre-line
+  
+  &-header
+    padding:var(--padding)
+    text-align: left
+    padding-left: 0
+
+  &-footer
+      display: flex
+      justify-content: center
+      padding: var(--padding) 0
+
+.cta
+  background-color: var(--white)
+  padding: .7rem var(--padding)
+  margin: calc(var(--margin) * 2) 0 0
+  border-radius: 2rem
+  text-decoration: none
+  color: var(--violet)
+  display: inline-block
+  width: 90%
+  max-width: 15rem
+
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+  transition: all .5s
+  text-align: center
+
+  &:hover
+    background-color: var(--soft-magenta)
+    color: var(--white)
+    transition: all .5s
+
+  &:active,
+  &:focus
+    color: var(--soft-magenta)
+
+.social
+  &-icon
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 2.7rem
+    height: 2.7rem
+    padding: .5rem
+    margin: .5rem
+
+    border: 1px solid var(--white)
+    border-radius: 50%
+    text-decoration: none
+    color: var(--white)
+    transition: all 1s
+
+    &:hover
+      color: var(--hot-magenta)
+      border-color: var(--hot-magenta)
+      transition: all 1s
+
+    &:last-child
+      margin-right: 0
+
+    > img
+      height: 1.3rem
+      filter: invert(1)
+
+.icon 
+  font-family: "fontello"
+  font-style: normal
+  font-weight: normal
+  speak: never
+  font-size: 1.5rem
+ 
+  display: inline-block
+  text-decoration: inherit
+  width: 1em
+  margin-right: .2em
+  text-align: center
+   
+  font-variant: normal
+  text-transform: none
+
+  line-height: 1em
+  margin-left: .2em
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+@media screen and (min-width: 998px)
+  body
+    background-image: url("../images/bg-desktop.svg")
+    text-align: initial
+
+  .main
+    &-container
+      padding-left: var(--padding)
+      padding-right: var(--padding)
+
+    &-content
+      gap: 2.8rem
+      grid-template-columns: 1fr 1fr
+      justify-content: center
+      align-items: center
+
+      h1
+        &.title
+          font-family: var(--font-family-headings)
+          font-size: 2.5rem
+          line-height: 3.5rem
+    
+    &-footer
+      justify-content: end
+      padding: 0 0 1rem
+    
+    .image-hero 
+      > img
+        width: 100%
+        height: 100%
+
+  .cta
+    width: auto
+    min-width: 12rem
+    margin: calc(var(--margin) * 1.5) 0
+
+@media screen and (min-width: 1440px)
+  .main-content
+    grid-template-columns: 3fr 2fr
