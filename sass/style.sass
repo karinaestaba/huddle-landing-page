@@ -60,26 +60,28 @@ button
 
   &-content
     display: grid
-    padding-top: var(--padding)
-    padding-bottom: var(--padding)
+    padding-bottom: 3px
 
     .image
       &-container
-        padding-bottom: var(--padding)
+        padding-bottom: 0
+        padding-top: 78px
 
       &-hero 
         > img
           width: 100%
 
     .text-container
-      padding-top: var(--padding)
+      align-self: center
+      margin-top: -59px
+      padding-left: 10px
     
     h1
       &.title
         font-family: var(--font-family-headings)
         font-size: 2rem
         line-height: 3rem
-        margin-bottom: var(--margin)
+        margin-bottom: 18px
         white-space: pre-line
   
   &-header
@@ -95,7 +97,6 @@ button
 .cta
   background-color: var(--white)
   padding: .7rem var(--padding)
-  margin: calc(var(--margin) * 2) 0 0
   border-radius: 2rem
   text-decoration: none
   color: var(--violet)
@@ -124,7 +125,7 @@ button
     width: 2.7rem
     height: 2.7rem
     padding: .5rem
-    margin: .5rem
+    margin: 7px
 
     border: 1px solid var(--white)
     border-radius: 50%
@@ -136,9 +137,6 @@ button
       color: var(--hot-magenta)
       border-color: var(--hot-magenta)
       transition: all 1s
-
-    &:last-child
-      margin-right: 0
 
     > img
       height: 1.3rem
@@ -172,20 +170,26 @@ button
 
   .main
     &-container
-      padding-left: var(--padding)
-      padding-right: var(--padding)
+      padding-left: 40px
+      padding-right: 40px
+      padding-top: 24px
 
     &-content
-      gap: 2.8rem
+      gap: 41px
       grid-template-columns: 1fr 1fr
       justify-content: center
-      align-items: center
+      
 
       h1
         &.title
           font-family: var(--font-family-headings)
-          font-size: 2.5rem
-          line-height: 3.5rem
+          font-size: 40px
+          line-height: 61px
+
+      p
+        &.description
+          white-space: pre-line
+          margin-bottom: 18px
     
     &-footer
       justify-content: end
@@ -197,10 +201,8 @@ button
         height: 100%
 
   .cta
-    width: auto
-    min-width: 12rem
-    margin: calc(var(--margin) * 1.5) 0
+    width: 200px
 
 @media screen and (min-width: 1440px)
   .main-content
-    grid-template-columns: 3fr 2fr
+    grid-template-columns: 2.6fr 2fr
