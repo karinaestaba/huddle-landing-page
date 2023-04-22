@@ -1,23 +1,13 @@
-@font-face
-  font-family: 'fontello'
-  src: url('../font/fontello.eot?63210088')
-  src: url('../font/fontello.eot?63210088#iefix') format('embedded-opentype'), url('../font/fontello.woff?63210088') format('woff'), url('../font/fontello.ttf?63210088') format('truetype'), url('../font/fontello.svg?63210088#fontello') format('svg')
-  font-weight: normal
-  font-style: normal
-
-\:root
-  --violet: hsl(257, 40%, 49%)
-  --soft-magenta: hsl(300, 69%, 71%)
-  --hot-magenta: #e959c5
-  --white: #fff
-
-  --font-family-headings: 'Poppins', sans-serif
-  --font-family-body: 'Open Sans', sans-serif
-  --font-size: 18px
-  --line-height: 30px
-
-  --padding: 2rem
-  --margin: 1rem
+$violet: hsl(257, 40%, 49%)
+$soft-magenta: hsl(300, 69%, 71%)
+$hot-magenta: #e959c5
+$white: #fff
+$font-family-headings: 'Poppins', sans-serif
+$font-family-body: 'Open Sans', sans-serif
+$font-size: 18px
+$line-height: 30px
+$padding: 2rem
+$margin: 1rem
 
 *,
 *::after,
@@ -28,26 +18,25 @@
 
 html,
 body
-  height: 100%
-  min-height: 100vh
+  min-height: 100%
 
 body
-  background-color: var(--violet)
+  background-color: $violet
   background-image: url("../images/bg-mobile.svg")
   background-repeat: no-repeat
   background-position: center
   background-size: cover
-  padding: var(--padding)
-  font-family: var(--font-family-body)
-  font-size: var(--font-size)
-  line-height: var(--line-height)
+  padding: $padding
+  font-family: $font-family-body
+  font-size: $font-size
+  line-height: $line-height
   text-align: center
 
 body,
 p,
 h1,
 button
-  color: var(--white)
+  color: $white
 
 .main
   &-container
@@ -65,41 +54,43 @@ button
     .image
       &-container
         padding-bottom: 0
-        padding-top: 78px
 
       &-hero 
         > img
           width: 100%
-
-    .text-container
-      align-self: center
-      margin-top: -59px
-      padding-left: 10px
     
     h1
       &.title
-        font-family: var(--font-family-headings)
+        font-family: $font-family-headings
         font-size: 2rem
         line-height: 3rem
         margin-bottom: 18px
         white-space: pre-line
   
   &-header
-    padding:var(--padding)
+    padding:$padding
     text-align: left
     padding-left: 0
 
   &-footer
       display: flex
       justify-content: center
-      padding: var(--padding) 0
+      padding: $padding 0
+
+.text-container
+  align-self: center
+  padding-left: 10px
+
+  p
+    &.description
+      margin-bottom: 30px
 
 .cta
-  background-color: var(--white)
-  padding: .7rem var(--padding)
+  background-color: $white
+  padding: .7rem $padding
   border-radius: 2rem
   text-decoration: none
-  color: var(--violet)
+  color: $violet
   display: inline-block
   width: 90%
   max-width: 15rem
@@ -109,13 +100,13 @@ button
   text-align: center
 
   &:hover
-    background-color: var(--soft-magenta)
-    color: var(--white)
+    background-color: $soft-magenta
+    color: $white
     transition: all .5s
 
   &:active,
   &:focus
-    color: var(--soft-magenta)
+    color: $soft-magenta
 
 .social
   &-icon
@@ -127,15 +118,15 @@ button
     padding: .5rem
     margin: 7px
 
-    border: 1px solid var(--white)
+    border: 1px solid $white
     border-radius: 50%
     text-decoration: none
-    color: var(--white)
+    color: $white
     transition: all 1s
 
     &:hover
-      color: var(--hot-magenta)
-      border-color: var(--hot-magenta)
+      color: $hot-magenta
+      border-color: $hot-magenta
       transition: all 1s
 
     > img
@@ -178,17 +169,17 @@ button
       gap: 41px
       grid-template-columns: 1fr 1fr
       justify-content: center
+      min-height: 60vh
       
 
       h1
         &.title
-          font-family: var(--font-family-headings)
+          font-family: $font-family-headings
           font-size: 40px
           line-height: 61px
 
       p
         &.description
-          white-space: pre-line
           margin-bottom: 18px
     
     &-footer
@@ -203,6 +194,39 @@ button
   .cta
     width: 200px
 
+.credits
+  grid-area: foot
+  min-height: 65px
+  color: $white
+  text-align: center
+  font-size: 12px
+  line-height: 1.1
+  display: flex
+  justify-content: center
+  align-content: center
+  align-items: center
+  flex-wrap: wrap
+
+  a
+    color: $soft-magenta
+    text-decoration: none
+    transition: all .5s ease
+    
+    &:hover
+      color: $hot-magenta
+
+@media screen and (min-width: 998px)
+  .main-content
+    .image-container
+      padding-top: 78px
+
+    .text-container
+      margin-top: -59px
+
 @media screen and (min-width: 1440px)
+  body
+    height: 100%
+    min-height: 100vh
+
   .main-content
     grid-template-columns: 2.6fr 2fr
